@@ -1,0 +1,445 @@
+/* General Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.container {
+    overflow-y: auto; /* Ensure the container is scrollable */
+    height: 100vh; /* Full height to allow scrolling */
+}
+
+body {
+    overflow-y: auto; /* Ensure the body itself can scroll if needed */
+}
+
+.select-container {
+    position: relative; /* This ensures the dropdown remains within the view */
+}
+
+.select-container select {
+    width: 100%;
+    z-index: 10; /* Bring the dropdown above other elements if needed */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none; /* Remove background */
+}
+
+.container {
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    padding: 20px; /* Padding for spacing */
+    box-shadow: none; /* Remove shadow */
+    border-radius: 0; /* Remove border radius */
+    background-color: #ffffff; /* White background for the form */
+    overflow-y: auto; /* Enable scrolling for long forms */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Spacing below the logo section */
+    padding-top: 20px; /* Padding to ensure the logo isn't cut off */
+}
+
+.logo {
+    height: 150px; /* Default logo height */
+    margin-right: 10px; /* Space between the logo and text */
+    object-fit: contain; /* Ensure the logo scales properly */
+}
+
+.brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 62px; /* Default font size of the brand name */
+    font-weight: 600; /* Bold font weight for "GOODS" */
+    color: #27AE60; /* The green color for "Goods" */
+    line-height: 1.2; /* Adjust line-height for better alignment */
+}
+
+.brand-name span {
+    font-weight: 300; /* Thinner font weight for "WAY" */
+    color: #2C3E50; /* The dark blue/black color for "WAY" */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo {
+        height: 120px; /* Reduce logo height on medium screens */
+    }
+
+    .brand-name {
+        font-size: 48px; /* Reduce font size of the brand name */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 120px; /* Further reduce logo height on small screens */
+    }
+
+    .brand-name {
+        font-size: 33px; /* Further reduce font size of the brand name */
+    }
+}
+
+.container .title {
+    font-size: 45px;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Adjust text color as needed */
+}
+
+.container .title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Position the underline slightly below the text */
+    transform: translateX(-50%);
+    height: 3px; /* Thickness of the underline */
+    width: 30%; /* Responsive width, adjusts with screen size */
+    max-width: 200px; /* Maximum width for larger screens */
+    min-width: 60px; /* Minimum width for smaller screens */
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6); /* Gradient for the underline */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container .title {
+        font-size: 35px; /* Slightly smaller font on smaller screens */
+    }
+
+    .container .title::after {
+        width: 40%; /* Increase underline width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container .title {
+        font-size: 28px; /* Further reduce font size for very small screens */
+    }
+
+    .container .title::after {
+        width: 50%; /* Further increase underline width on very small screens */
+    }
+}
+
+.user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+.user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-box select,
+.input-box input[type="number"],
+.input-box input[type="text"] {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+/* Larger size for Years of Experience input when selecting Light license type */
+#vehicle-specific-fields .input-box input[name="Years of Experience"] {
+    width: 100%; /* Full width */
+}
+
+
+
+
+#vehicle-specific-fields .input-box select,
+#vehicle-specific-fields .input-box input[type="number"] {
+    margin-top: 5px;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+/* Remove arrow from input[type="number"] and input[type="search"] */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"],
+input[type="search"] {
+    -moz-appearance: textfield; /* Firefox */
+    appearance: textfield; /* Standard */
+}
+
+/* Styling for text inputs (Name, Phone, etc.) */
+.user-details .input-box input[type="text"],
+.user-details .input-box input[type="tel"],
+.user-details .input-box input[type="number"],
+.user-details .input-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    background: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Additional styling for consistent focus state */
+.user-details .input-box input:focus,
+.user-details .input-box select:focus {
+    border-color: #9b59b6;
+    box-shadow: 0 0 8px rgba(155, 89, 182, 0.6);
+}
+
+/* Ensuring uniform padding and margin for all input elements */
+.input-box {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Specific styling for dropdowns (consistent arrow, padding) */
+.user-details .input-box select {
+    background: #fff url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='292.362' height='292.362' viewBox='0 0 292.362 292.362'><path fill='%23333' d='M287.31 69.236l-14.274-14.273c-5.857-5.856-15.355-5.856-21.213 0L146.181 160.604 40.538 54.963c-5.857-5.856-15.355-5.856-21.213 0L5.051 69.236c-5.856 5.857-5.856 15.355 0 21.213l130.632 130.632c5.856 5.856 15.355 5.856 21.213 0l130.632-130.632c5.857-5.857 5.857-15.356.002-21.213z'/></svg>") no-repeat right 10px center;
+    background-size: 12px 12px;
+}
+
+/* Adjustments for dynamically added fields */
+#role-specific-fields .input-box,
+#vehicle-specific-fields .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#vehicle-specific-fields .input-box select,
+#vehicle-specific-fields .input-box input[type="number"] {
+    margin-top: 5px;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+
+
+.input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Specific styling for dropdowns (consistent arrow, padding) */
+.user-details .input-box select {
+    background: #fff url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='292.362' height='292.362' viewBox='0 0 292.362 292.362'><path fill='%23333' d='M287.31 69.236l-14.274-14.273c-5.857-5.856-15.355-5.856-21.213 0L146.181 160.604 40.538 54.963c-5.857-5.856-15.355-5.856-21.213 0L5.051 69.236c-5.856 5.857-5.856 15.355 0 21.213l130.632 130.632c5.856 5.856 15.355 5.856 21.213 0l130.632-130.632c5.857-5.857 5.857-15.356.002-21.213z'/></svg>") no-repeat right 10px center;
+    background-size: 12px 12px;
+}
+
+/* Adjustments for dynamically added fields */
+#role-specific-fields .input-box,
+#vehicle-specific-fields .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+
+
+.phone-input {
+    display: flex;
+    align-items: center;
+}
+
+.country-code {
+    height: 45px;
+    padding: 0 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease;
+}
+
+.phone-input input[type="tel"] {
+    height: 45px;
+    flex: 1;
+    padding-left: 15px;
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.phone-input input[type="tel"]:focus,
+.phone-input input[type="tel"]:focus + .country-code,
+.country-code:focus-within {
+    border-color: #9b59b6;
+}
+
+.role-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.role-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    width: calc(50% - 10px);
+}
+
+.role-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.vehicle-type {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.vehicle-type label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+}
+
+.vehicle-type input[type="radio"] {
+    margin-right: 10px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form .button {
+    height: 45px;
+    margin: 35px auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .button input:hover {
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 70%; /* Increase width for larger screens */
+        height: auto; /* Adjust height based on content */
+        padding: 40px 50px; /* Padding for the form box */
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-details .input-box {
+        width: calc(50% - 10px);
+    }
+
+    .user-details .input-box input[type="number"] {
+        width: 80%;
+    }
+}
